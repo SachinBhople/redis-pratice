@@ -4,6 +4,8 @@ const { redis } = require("../utils/redis")
 exports.getAllBlogs = async (req, res) => {
 
     try {
+        console.log("ss");
+
         const exists = await redis.exists("newblogs")
         let value
         if (exists) {
